@@ -1,0 +1,46 @@
+    <div id="header__repozitorija" class="header__wrapper">
+        <a href="#banner__searchBar" class="skip-to-main-content-link" tabindex="0">Skoči na glavni sadržaj </a>
+        <header class="navbar navbar-expand">
+            <div class="container-xxl" id="primary__navbar-wrapper">
+                <div class="repository__logos-wrapper">
+                    <a class="navbar-brand" href="#">
+                        <img src="../assets/img/logotipovi-usluga/logo_uni1.gif" alt="Početna">
+                    </a>
+                    <div class="repository__text-wrapper">
+                        <a href="#" class="repository__text-name">
+                            RUNIOS
+                        </a>
+                        <p class="repository__text-description">Repozitorij Sveučilišta Josipa Jurja Strossmayera u
+                            Osijeku
+                        </p>
+                    </div>
+                </div>
+                <hr class="navbar__line-horizontal">
+                <div class="navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto me-2 mb-lg-0">
+                        <li class="nav-item">
+                            <legend class="visually-hidden">Odabir jezika</legend>
+                            <div class="language__select">
+                                <select id="langSelect" class="form-select" aria-label="Jezik:">
+                                    <option value="hr" selected="">HRV</option>
+                                    <option value="en">ENG</option>
+                                </select>
+                            </div>
+                        </li>
+                          {{#if userLoggedIn}}
+                          {{> loggedIn}}
+                          {{else}}
+                          {{> loggedOut}}
+                          {{/if}}
+                    </ul>
+                </div>
+                <a class="navbar-brand naslovnice__repozitorija" href="#">
+                    <img
+                        src="./assets/img/dabar.svg"
+                        class="header__dabarLogo-size"
+                        alt="Početna"
+                        />
+                </a>
+            </div>
+        </header>
+    </div>
