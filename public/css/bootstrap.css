@@ -13761,7 +13761,7 @@ section .card {
   .text__content h1, .text__content .h1 {
     font-size: 1.5rem !important;
     order: 1;
-    margin-top: 0;
+    margin-top: 85px;
     padding-top: 0;
   }
   .text__content-advanced,
@@ -13787,6 +13787,11 @@ section .card {
   }
   .custom-shape-divider-bottom-1707211383 svg {
     height: 50px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .vh-30 {
+    height: 30vh;
   }
 }
 @media screen and (max-width: 576px) {

@@ -108,6 +108,12 @@ app.get("/podrucje-grana", (req, res) => {
   res.render("podrucje-grana");
 });
 
+app.get("/login", (req, res) => {
+  res.render("login", {
+    title: "Aplikacija za održavanje sadržaja imenika AAI@EduHr Lab-a",
+  });
+});
+
 app.get("*", (req, res) => {
   res.render("404");
 });
