@@ -62,54 +62,14 @@ app.get("/naslovnice-repozitorija", (req, res) => {
   });
 });
 
-app.get("/napredno-pretrazivanje", (req, res) => {
-  res.render("napredno-pretrazivanje", { title: "Napredno pretraživanje" });
-});
-
-app.get("/browse", (req, res) => {
-  res.render("browse");
-});
-
-app.get("/pohrana-objekata", (req, res) => {
-  res.render("pohrana-objekata");
-});
-
-app.get("/browse-by-type", (req, res) => {
-  res.render("browse-by-type");
-});
-
-app.get("/results", (req, res) => {
-  res.render("results", { title: "Rezultati pretraživanja" });
-});
-app.get("/osnovna-stranica", (req, res) => {
-  res.render("osnovna-stranica", { title: "Osnovna stranica" });
-});
-app.get("/object", (req, res) => {
-  res.render("object", { title: "Detalji objekta" });
-});
-
-app.get("/news", (req, res) => {
-  res.render("news", { title: "Vijesti" });
-});
-
-app.get("/news-vertical", (req, res) => {
-  res.render("news-vertical", { title: "Vijesti" });
-});
-
-app.get("/news-horizontal", (req, res) => {
-  res.render("news-horizontal");
-});
-
-app.get("/naslovnice-repozitorija", (req, res) => {
-  res.render("naslovnice-repozitorija");
-});
-
-app.get("/podrucje-grana", (req, res) => {
-  res.render("podrucje-grana");
-});
-
 app.get("/login", (req, res) => {
   res.render("login", {
+    title: "Aplikacija za održavanje sadržaja imenika AAI@EduHr Lab-a",
+  });
+});
+
+app.get("/korisnici", (req, res) => {
+  res.render("korisnici", {
     title: "Aplikacija za održavanje sadržaja imenika AAI@EduHr Lab-a",
   });
 });

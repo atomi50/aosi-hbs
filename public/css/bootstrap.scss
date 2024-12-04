@@ -685,7 +685,7 @@ input:checked + .slider:before {
   justify-content: center;
 }
 
-.filterContent__container .card:first-child {
+.filterContent__container .card__filters {
   opacity: 1;
   width: 25vw;
   transition: 500ms linear;
@@ -695,7 +695,7 @@ input:checked + .slider:before {
   position: sticky;
 }
 
-.filterContent__container .card:first-child.closed {
+.filterContent__container .card__filters.closed {
   opacity: 0;
   width: 0;
   margin: 0;
@@ -728,12 +728,12 @@ input:checked + .slider:before {
   z-index: 2;
 }
 
-.filterContent__container .card {
+.filterContent__container .card__filters {
   height: fit-content;
   border: none;
 }
 
-.filterContent__container .card:first-child {
+.filterContent__container .card__filters {
   width: 25vw;
   margin-right: 2rem;
 }
@@ -1784,7 +1784,7 @@ body {
 //
 
 @media screen and (max-width: 1100px) {
-  .filterContent__container .card:first-child {
+  .filterContent__container .card__filters {
     position: fixed;
     width: 300px;
     height: 100%;
@@ -1795,7 +1795,7 @@ body {
     overflow-y: auto;
   }
 
-  .filterContent__container .card:first-child.closed {
+  .filterContent__container .card__filters.closed {
     left: 0;
     width: 0px;
     opacity: 0;

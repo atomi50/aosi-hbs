@@ -1,0 +1,18 @@
+<div class="d-flex justify-content-between">
+  <div>
+    <p class="text-black fw-bold d-inline">
+      {{text}}
+    </p>
+    <span>({{code}})</span><a class="text-danger text-decoration-none" data-bs-toggle="collapse" href=#{{identificator}}
+      role="button" aria-expanded="false" aria-controls={{identificator}}>
+      info</a>
+    <div class="collapse" id={{identificator}}>
+      <div class="card card-body">
+        {{description}}
+      </div>
+    </div>
+  </div>
+  <div>
+    <p>{{value}}</p>
+  </div>
+</div>
