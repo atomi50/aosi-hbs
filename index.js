@@ -71,12 +71,7 @@ app.get("/login", (req, res) => {
 app.get("/korisnici", (req, res) => {
   const data = {
     title: "Aplikacija za održavanje sadržaja imenika AAI@EduHr Lab-a",
-    text: "Povezanost s ustanovom",
-    code: "hrEduPersonAffiliation",
-    identificator: "hrEduPersonAffiliation",
-    description:
-      "Određuje veze između osobe i matične ustanove (primjerice student, djelatnik, ...). Ako je osoba vezana uz ustanovu na više načina, potrebno je upisati sve veze.",
-    value: "djelatnik",
+    pageSubtitle: "Ažuriranje podataka",
     options: [
       "nije postavljeno",
       "nepoznat",
@@ -84,8 +79,39 @@ app.get("/korisnici", (req, res) => {
       "ženski",
       "nije naveden",
     ],
+    links: ["Ažuriranje podataka", "Promjena zaporke"],
   };
   res.render("korisnici", data);
+});
+
+app.get("/lista-korisnika", (req, res) => {
+  const data = {
+    title: "Aplikacija za održavanje sadržaja imenika AAI@EduHr Lab-a",
+    pageSubtitle: "Lista korisnika",
+    options: [
+      "Nije odabrano",
+      "student",
+      "djelatnik",
+      "učenik",
+      "vanjski suradnik",
+      "korisnik usluge",
+      "gost",
+      "cjeloživotno obrayovanje",
+    ],
+    links: [
+      "Lista korisnika",
+      "Dodavanje korisnika",
+      "Dodavanje korisnika (iz tekst. datoteke)",
+      "Ažuriranje podataka (iz tekst. datoteke)",
+      "Zaključani korisnici",
+      "Provjera zaporke",
+      "Datum isteka",
+      "Brisanje korisnika",
+      "Brisanje korisnika (iz tekst. datoteke)",
+      "Lista administratora",
+    ],
+  };
+  res.render("lista-korisnika", data);
 });
 
 app.get("*", (req, res) => {
