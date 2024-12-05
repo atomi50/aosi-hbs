@@ -199,19 +199,15 @@ removeRowBtn.addEventListener("click", function () {
 updateButtons();
 
 // Checkbox
-
-// Function to toggle checkbox state on Enter key press
 function toggleCheckboxOnEnter(event) {
   if (event.key === "Enter") {
     const checkbox = event.target;
-    checkbox.checked = !checkbox.checked; // Toggle the checked state
+    checkbox.checked = !checkbox.checked;
   }
+
+  const checkboxes = document.querySelectorAll(".form-check-input");
+
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener("keydown", toggleCheckboxOnEnter);
+  });
 }
-
-// Get all checkbox inputs
-const checkboxes = document.querySelectorAll(".form-check-input");
-
-// Add event listener for keydown event to each checkbox
-checkboxes.forEach((checkbox) => {
-  checkbox.addEventListener("keydown", toggleCheckboxOnEnter);
-});
