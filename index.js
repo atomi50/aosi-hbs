@@ -69,9 +69,23 @@ app.get("/login", (req, res) => {
 });
 
 app.get("/korisnici", (req, res) => {
-  res.render("korisnici", {
+  const data = {
     title: "Aplikacija za održavanje sadržaja imenika AAI@EduHr Lab-a",
-  });
+    text: "Povezanost s ustanovom",
+    code: "hrEduPersonAffiliation",
+    identificator: "hrEduPersonAffiliation",
+    description:
+      "Određuje veze između osobe i matične ustanove (primjerice student, djelatnik, ...). Ako je osoba vezana uz ustanovu na više načina, potrebno je upisati sve veze.",
+    value: "djelatnik",
+    options: [
+      "nije postavljeno",
+      "nepoznat",
+      "muški",
+      "ženski",
+      "nije naveden",
+    ],
+  };
+  res.render("korisnici", data);
 });
 
 app.get("*", (req, res) => {
