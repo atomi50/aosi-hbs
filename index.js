@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const session = require("express-session");
 const exphbs = require("express-handlebars");
+const links = require("./public/js/links");
 
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
@@ -60,7 +61,7 @@ app.get("/login", (req, res) => {
   });
 });
 
-app.get("/korisnici", (req, res) => {
+app.get("/azuriranje-podataka", (req, res) => {
   const data = {
     title: "Aplikacija za održavanje sadržaja imenika AAI@EduHr Lab-a",
     pageSubtitle: "Ažuriranje podataka",
@@ -73,7 +74,26 @@ app.get("/korisnici", (req, res) => {
     ],
     links: ["Ažuriranje podataka", "Promjena zaporke"],
   };
-  res.render("korisnici", data);
+  res.render("azuriranje-podataka", data);
+});
+
+app.get("/dodavanje-korisnika", (req, res) => {
+  const data = {
+    title: "Aplikacija za održavanje sadržaja imenika AAI@EduHr Lab-a",
+    pageSubtitle: "Dodavanje korisnika",
+    options: [
+      "Nije odabrano",
+      "student",
+      "djelatnik",
+      "učenik",
+      "vanjski suradnik",
+      "korisnik usluge",
+      "gost",
+      "cjeloživotno obrazovanje",
+    ],
+    links,
+  };
+  res.render("dodavanje-korisnika", data);
 });
 
 app.get("/lista-korisnika", (req, res) => {
@@ -90,18 +110,7 @@ app.get("/lista-korisnika", (req, res) => {
       "gost",
       "cjeloživotno obrazovanje",
     ],
-    links: [
-      "Lista korisnika",
-      "Dodavanje korisnika",
-      "Dodavanje korisnika (iz tekst. datoteke)",
-      "Ažuriranje podataka (iz tekst. datoteke)",
-      "Zaključani korisnici",
-      "Provjera zaporke",
-      "Datum isteka",
-      "Brisanje korisnika",
-      "Brisanje korisnika (iz tekst. datoteke)",
-      "Lista administratora",
-    ],
+    links,
   };
   res.render("lista-korisnika", data);
 });

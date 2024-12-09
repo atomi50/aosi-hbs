@@ -14,7 +14,6 @@
       </div>
     </div>
   </div>
-
   <div>
     {{#if select}}
       <select class="form-select" aria-label="odaberite opciju">
@@ -25,22 +24,33 @@
     {{else}}
       {{#if input}}
         <div>
-          <label for="input-id" class="form-label visually-hidden">inputLabel</label>
-          <input type="{{input.type}}" class="form-control" id="input-id" aria-describedby="{{input.aria}}"
+          <label for="{{code}}" class="form-label visually-hidden">inputLabel</label>
+          <input type="{{input.type}}" class="form-control" id="{{code}}" aria-describedby="{{input.aria}}"
             placeholder="{{input.placeholder}}" />
         </div>
       {{else}}
-        {{#if file}}
-          <div class="mt-md-n3">
-            <form action="/action_page.php" method="post" enctype="multipart/form-data">
-              <label for="file-upload" aria-label="odaberite sliku" class="form-label mt-1 me-4" id="uploadFile"
-                tabindex="0">
-              </label>
-              <input type="file" id="file-upload" name="file-upload" class="form-control">
+        {{#if calendar}}
+          <div>
+            <form action="/action_page.php">
+              <label for="{{code}}" class="form-label visually-hidden">datum</label>
+              <input type="date" id="{{code}}" name="datum"
+                style="width:230px;height:40px; border-radius:5px;border:1px solid lightgray;padding:5px">
+              <input type="submit" aria-label="submit" class="visually-hidden">
             </form>
           </div>
         {{else}}
-          <p>{{value}}</p>
+          {{#if file}}
+            <div class="mt-md-n3">
+              <form action="/action_page.php" method="post" enctype="multipart/form-data">
+                <label for="file-upload" aria-label="odaberite sliku" class="form-label mt-1 me-4" id="uploadFile"
+                  tabindex="0">
+                </label>
+                <input type="file" id="file-upload" name="file-upload" class="form-control">
+              </form>
+            </div>
+          {{else}}
+            <p>{{value}}</p>
+          {{/if}}
         {{/if}}
       {{/if}}
     {{/if}}
