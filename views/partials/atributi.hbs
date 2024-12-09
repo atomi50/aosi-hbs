@@ -1,0 +1,48 @@
+<div class="d-flex flex-column flex-md-row justify-content-between my-2">
+  <div>
+    <p class="text-black fw-bold d-inline">
+      {{text}}
+    </p>
+    <span>({{code}})</span>
+    <a class="text-danger text-decoration-none" data-bs-toggle="collapse" href="#{{identificator}}" role="button"
+      aria-expanded="false" aria-controls="{{identificator}}">
+      info
+    </a>
+    <div class="collapse" id="{{identificator}}">
+      <div class="card card-body">
+        {{description}}
+      </div>
+    </div>
+  </div>
+
+  <div>
+    {{#if select}}
+      <select class="form-select" aria-label="odaberite opciju">
+        {{#each options}}
+          <option value="{{this}}">{{this}}</option>
+        {{/each}}
+      </select>
+    {{else}}
+      {{#if input}}
+        <div>
+          <label for="input-id" class="form-label visually-hidden">inputLabel</label>
+          <input type="{{input.type}}" class="form-control" id="input-id" aria-describedby="{{input.aria}}"
+            placeholder="{{input.placeholder}}" />
+        </div>
+      {{else}}
+        {{#if file}}
+          <div class="mt-md-n3">
+            <form action="/action_page.php" method="post" enctype="multipart/form-data">
+              <label for="file-upload" aria-label="odaberite sliku" class="form-label mt-1 me-4" id="uploadFile"
+                tabindex="0">
+              </label>
+              <input type="file" id="file-upload" name="file-upload" class="form-control">
+            </form>
+          </div>
+        {{else}}
+          <p>{{value}}</p>
+        {{/if}}
+      {{/if}}
+    {{/if}}
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<section class="card card__filters" aria-label="filtriranje">
+    <div class="card-body card__filters-body">
+        <div class="d-flex justify-content-between align-items-center">
+            <span onclick="toggleSidebar()" aria-label="Sakrij opcije mog repozitorija"><i
+                    class="bi bi-box-arrow-left filterButton" tabindex="0"></i></span>
+        </div>
+        <div class="card-text mt-4">
+            <ul>
+                {{#each links}}
+                    <li><a href="">{{this}}</a></lli>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,47 @@
+<div class="container-fluid content-wrapper p-0 flex-grow-1">
+    <div class="container-fluid banner__visual">
+        {{> banner__inner}}
+        {{> shape__divider}}
+    </div>
+    <!-- End of banner beginning of content cards -->
+    <section id="main" class="container-xxl nofilterContent__container" aria-label="sadržaj">
+        <section class="card">
+            <div class="card-body" style="min-height:400px">
+                <h2 class="card-title m-0 pb-0">Prijava u sustav</h2>
+                <p class="mt-2">Molimo prijavite se u sustav</p>
+                <div class="d-flex justify-content-center mt-5">
+                    <div class="d-flex flex-column align-items-center align-items-sm-start">
+                        <form class="row align-items-start justify-content-center justify-content-sm-start">
+                            <div class="col-auto pe-0">
+                                <label class="visually-hidden" for="korisnickaOznaka">Korisnička oznaka</label>
+                                <input type="text" class="form-control" id="korisnickaOznaka"
+                                    placeholder="Korisnička oznaka">
+                            </div>
+                            <div class="col-auto ps-0">
+                                <label class="visually-hidden" for="autoSizingInputGroup">Domena</label>
+                                <div class="input-group">
+                                    <div class="input-group-text border border-0 bg-transparent px-0">@</div>
+                                    <select class="form-select rounded-2 mt-1 mt-sm-0"
+                                        aria-label="Izaberite svoju domenu">
+                                        <option selected>Izaberite svoju domenu</option>
+                                        <option value="1">aai-test.hr</option>
+                                        <option value="2">aois-dev.hr</option>
+                                        <option value="3">arhivax.hr</option>
+                                    </select>
+                                    {{!-- <span class="fs-4 ps-1 pb-1">srce.hr</span> --}}
+                                </div>
+                            </div>
+                        </form>
+                        <div class="col-auto w-50 mb-3">
+                            <label class="visually-hidden" for="korisnickaZaporka">Zaporka</label>
+                            <input type="text" class="form-control" id="korisnickaZaporka" placeholder="Zaporka">
+                        </div>
+                        <div class="col-auto mx-auto">
+                            <button type="submit" class="btn btn-primary">Prijava</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</div>
