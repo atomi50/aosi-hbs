@@ -1,0 +1,47 @@
+<div class="container-fluid content-wrapper p-0 flex-grow-1">
+    <div class="container-fluid banner__visual">
+        {{> banner__inner}}
+        {{> shape__divider}}
+    </div>
+    <!-- End of banner beginning of content cards -->
+    <div onclick="toggleSidebar()" class="filter__button" aria-hidden="true"><i class="bi bi-person-fill filterButton"
+            aria-label="Prikaži izbornik" tabindex="-1"></i>
+    </div>
+    <section id="main" class="container-xxl filterContent__container" aria-label="sadržaj">
+        {{> lijevi-izbornik}}
+        <section class="card">
+            <div class="card-body">
+                <h2 class="card-title m-0 pb-0">{{pageSubtitle}}</h2>
+                <h5 class="card-title m-0 pb-0">Za promjenu zaporke u prvo polje upišite staru zaporku, a u slijedeća
+                    dva novu i kliknite na gumb Promijeni. Da bi se zaporka promijenila, u oba polja za upis nove
+                    zaporke
+                    mora biti upisana ISTA zaporka.</h5>
+                <div class=" d-flex flex-column justify-content-center align-items-center mt-5 ">
+                    <div>
+                        <label for="stara-zaporka" class="form-label fw-bold mb-0">Stara zaporka</label>
+                        <input type="input" class="form-control" id="stara-zaporka" aria-describedby="Stara zaporka"
+                            placeholder="Stara zaporka" />
+                    </div>
+                    <div class="my-3">
+                        <label for="nova-zaporka" class="form-label fw-bold mb-0">Nova zaporka</label>
+                        <input type="input" class="form-control" id="nova-zaporka" aria-describedby="Nova zaporka"
+                            placeholder="Nova zaporka" />
+                    </div>
+                    <div>
+                        <label for="ponovljena-zaporka" class="form-label fw-bold mb-0">Nova zaporka</label>
+                        <input type="input" class="form-control" id="ponovljena-zaporka"
+                            aria-describedby="Ponovljena nova zaporka" placeholder="Ponovite novu zaporku" />
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center my-5">
+                    <button class="btn btn-outline-secondary me-2">Promijeni</button>
+                    <button class="btn btn-outline-secondary ms-2">Poništi</button>
+                </div>
+            </div>
+
+</div>
+
+</div>
+</section>
+</section>
+</div>

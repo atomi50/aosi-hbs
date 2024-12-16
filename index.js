@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const session = require("express-session");
 const exphbs = require("express-handlebars");
-const links = require("./public/js/links");
+const { linksKorisnici, linksAdministratori } = require("./public/js/links");
 
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
@@ -72,7 +72,7 @@ app.get("/azuriranje-podataka", (req, res) => {
       "ženski",
       "nije naveden",
     ],
-    links: ["Ažuriranje podataka", "Promjena zaporke"],
+    linksKorisnici,
   };
   res.render("azuriranje-podataka", data);
 });
@@ -91,9 +91,32 @@ app.get("/dodavanje-korisnika", (req, res) => {
       "gost",
       "cjeloživotno obrazovanje",
     ],
-    links,
+    linksAdministratori,
   };
   res.render("dodavanje-korisnika", data);
+});
+
+app.get("/dodavanje-korisnika-txt", (req, res) => {
+  const data = {
+    title: "Aplikacija za održavanje sadržaja imenika AAI@EduHr Lab-a",
+    pageSubtitle: "Dodavanje korisnika iz tekst. datoteke",
+    options: [
+      "Central european ( windows 1250 )",
+      "Central european ( ISO 8859-2)",
+      "UTF-8",
+    ],
+    linksAdministratori,
+  };
+  res.render("dodavanje-korisnika-txt", data);
+});
+
+app.get("/promjena-zaporke", (req, res) => {
+  const data = {
+    title: "Aplikacija za održavanje sadržaja imenika AAI@EduHr Lab-a",
+    pageSubtitle: "Promjena zaporke",
+    linksKorisnici,
+  };
+  res.render("promjena-zaporke", data);
 });
 
 app.get("/lista-korisnika", (req, res) => {
@@ -110,7 +133,7 @@ app.get("/lista-korisnika", (req, res) => {
       "gost",
       "cjeloživotno obrazovanje",
     ],
-    links,
+    linksAdministratori,
   };
   res.render("lista-korisnika", data);
 });

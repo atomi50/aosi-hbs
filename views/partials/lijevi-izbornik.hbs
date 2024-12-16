@@ -6,7 +6,10 @@
         </div>
         <div class="card-text mt-4">
             <ul>
-                {{#each links}}
+                {{#each linksAdministratori}}
+                    <li><a href={{link}}>{{title}}</a></lli>
+                {{/each}}
+                {{#each linksKorisnici}}
                     <li><a href={{link}}>{{title}}</a></lli>
                 {{/each}}
             </ul>

@@ -1,0 +1,28 @@
+<div class="container-fluid content-wrapper p-0 flex-grow-1"></div>
+<div class="container-fluid banner__visual">
+    {{> banner__inner}}
+    {{> shape__divider}}
+</div>
+<!-- End of banner beginning of content cards -->
+<div onclick="toggleSidebar()" class="filter__button" aria-hidden="true"><i class="bi bi-person-fill filterButton"
+        aria-label="Prikaži izbornik" tabindex="-1"></i>
+</div>
+<section id="main" class="container-xxl filterContent__container" aria-label="sadržaj">
+    {{> lijevi-izbornik}}
+    <section class="card">
+        <div class="card-body">
+            <h2 class="card-title m-0 pb-0">{{pageSubtitle}}</h2>
+            <div class="mt-5">
+                <p>Tip datoteke: <span>CSV</span></p>
+
+                {{> atributi text="Encoding datoteke" code="encoding-datoteke" identificator="encoding" placeholder="#" input="true"}}
+                {{> atributi text="Delimiter" code="userPassword" identificator="zaporka" description="Korisnička zaporka; rabi se pri autentikaciji; preporuča se čuvati je u imeniku kriptiranu te izbjegavati uporabu znakova koji bi zbog uporabe različitih kodnih stranica mogli stvoriti probleme korisnicima." input="true"}}
+            </div>
+            <div class="d-flex justify-content-center my-3">
+                <button class="btn btn-outline-secondary me-2">Dodaj</button>
+                <button class="btn btn-outline-secondary ms-2">Poništi</button>
+            </div>
+        </div>
+    </section>
+</section>
+</div>

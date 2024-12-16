@@ -1,4 +1,4 @@
-const links = [
+const linksAdministratori = [
   { link: "lista-korisnika", title: "Lista Korisnika" },
   { link: "dodavanje-korisnika", title: "Dodavanje korisnika" },
   {
@@ -35,4 +35,9 @@ const links = [
   },
 ];
 
-module.exports = links;
+const linksKorisnici = [
+  { link: "azuriranje-podataka", title: "Ažuriranje podataka" },
+  { link: "promjena-zaporke", title: "Promjena zaporke" },
+];
+
+module.exports = { linksKorisnici, linksAdministratori };
