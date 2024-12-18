@@ -1,0 +1,42 @@
+<div class="d-flex flex-column justify-content-between align-items-start mt-3">
+    <div>
+        <p class="text-black fw-bold d-inline">
+            {{text}}
+        </p>
+    </div>
+    <div>
+        {{#if select}}
+            <select class="form-select" aria-label="odaberite opciju">
+                {{#each options}}
+                    <option value="{{this}}">{{this}}</option>
+                {{/each}}
+            </select>
+        {{else if input}}
+            <div>
+                <label for="{{code}}" class="form-label visually-hidden">inputLabel</label>
+                <input type="{{inputType}}" class="form-control" id="{{inputCode}}" aria-describedby="{{inputAria}}"
+                    value="{{inputValue}}" placeholder="{{inputPlaceholder}}" />
+            </div>
+        {{else if calendar}}
+            <div>
+                <form action="/action_page.php">
+                    <label for="{{code}}" class="form-label visually-hidden">datum</label>
+                    <input type="date" id="{{code}}" name="datum"
+                        style="width:230px;height:40px; border-radius:5px;border:1px solid lightgray;padding:5px">
+                    <input type="submit" aria-label="submit" class="visually-hidden">
+                </form>
+            </div>
+        {{else if file}}
+            <div class="mt-md-n3">
+                <form action="/action_page.php" method="post" enctype="multipart/form-data">
+                    <label for="file-upload" aria-label="odaberite sliku" class="form-label mt-1 me-4" id="uploadFile"
+                        tabindex="0">
+                    </label>
+                    <input type="file" id="file-upload" name="file-upload" class="form-control">
+                </form>
+            </div>
+        {{else}}
+            <p>{{value}}</p>
+        {{/if}}
+    </div>
+</div>

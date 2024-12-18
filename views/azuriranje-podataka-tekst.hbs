@@ -1,0 +1,87 @@
+<div class="container-fluid content-wrapper p-0 flex-grow-1">
+    <div class="container-fluid banner__visual">
+        {{> banner__inner}}
+        {{> shape__divider}}
+    </div>
+    <!-- End of banner beginning of content cards -->
+    <div onclick="toggleSidebar()" class="filter__button" aria-hidden="true"><i class="bi bi-person-fill filterButton"
+            aria-label="Prikaži izbornik" tabindex="-1"></i>
+    </div>
+    <section id="main" class="container-xxl filterContent__container" aria-label="sadržaj">
+        {{> lijevi-izbornik}}
+        <section class="card">
+            <div class="card-body">
+                <h2 class="card-title m-0 pb-0">{{pageSubtitle}}</h2>
+                <div class="mt-5">
+                    <a class="text-danger text-decoration-none mb-5" data-bs-toggle="collapse" href="#infoTekst"
+                        role="button" aria-expanded="false" aria-controls="Informacije"
+                        aria-label="Informacije o dodavanju korisnika iz tekst datoteke">
+                        Info
+                    </a>
+                    <div class="collapse" id="infoTekst">
+                        <div class="card card-body">
+                            <div>
+                                <strong>Ažuriranje podataka o korisnicima iz tekstualne datoteke</strong><br>
+                                Ako imate potrebu ažurirati podatke većeg broja korisnika, a podatke imate ili možete
+                                prirediti u obliku tekstualne datoteke, u nastavku su upute kako to napraviti:
+                                Bitno je naglasiti da se kroz tekstualnu datoteku u svaki atribut može upisati samo
+                                jedna
+                                vrijednost, te da će stare vrijednosti atributa biti obrisane.<br>
+                                Ako je prije promjene neki atribut nekog korisnika imao više vrijednosti,
+                                nakon promjene će imati samo onu vrijednost koja je za taj atribut i tog korisnika
+                                navedena
+                                u datoteci.
+                                Kroz tekstualnu datoteku mogu biti promjenjene vrijednosti svih atributa (osim slika)
+                                koji
+                                postoje u shemi i koje administrator ima pravo mjenjati.
+                                <br>
+                                <strong>Kako formatirati tekstualnu datoteku za ažuriranje podataka o
+                                    korisnicima:</strong><br>
+                                Format tekstualne datoteke mora biti slijedeći:<br>
+                                U prvoj liniji datoteke treba biti naveden "uid", te nazivi svih atributa
+                                čiju vrijednost želite zamjeniti vrijednosti iz datoteke (odvojeni nekim
+                                delimiterom).<br>
+
+                                U svakom slijedećem redku datoteke trebaju biti podaci za po jednog
+                                korisnika. Naravno, vrijednosti pojedinih atributa u redku trebaju
+                                biti poredane istim redoslijedom i odvojene istim delimiterom kao
+                                i nazivi atributa iz prvog redka.<br>
+                                <strong>U svakom redku datoteke obavezno mora biti naveden uid
+                                    korisnika</strong><br><br>
+                                <strong>Primjer tekstualne datoteke:</strong>
+                                <p
+                                    style="background-color: white;font-family:sans-serif;font-size: small;font-weight: normal;color: Black;text-align: left;border: 1px solid black;padding: 3px;">
+                                    uid;hrEduPersonExpireDate<br>
+                                    test;NONE<br>
+                                    testa;01.09.2006.<br>
+                                    testb;31.10.2007.<br>
+                                </p>
+
+                                <strong>Upload datoteke:</strong><br>
+                                Iz padajuće liste odaberete encoding (ako je datoteka nastala korištenjem
+                                nekog tekst editora pod windows operativnim sustavom, obično je to
+                                windows 1250), zatim upišete delimiter koji ste koristili u datoteci,
+                                kliknete na gumb Browse i odaberete datoteku za prijenos, te kliknete na gumb
+                                Promjeni.<br>
+                                Nakon što se obradi lista korisnika kojima želite promjeniti vrijednost atributa, bit će
+                                Vam
+                                prikazan izvještaj iz kojega možete vidjeti je li operacija ažuriranja bila uspješna za
+                                svakog pojedinog korisnika s liste.<br>
+                                Preporuka je zbog nekih ograničenja (npr. timeout) kroz tekstualnu datoteku odjednom ne
+                                raditi promjene na više od 100-tinjak korisnika (naravno, taj broj ovisi o raznim
+                                parametrima kao snaga poslužitelja, opterećenost i sl).
+                            </div>
+                        </div>
+                    </div>
+                    {{> tekst-datoteke text="Tip datoteke CSV"}}
+                    {{> tekst-datoteke text="Encoding datoteke" select="true"}}
+                    {{> tekst-datoteke text="Delimiter" input="true" inputValue="#"}}
+                    {{> tekst-datoteke text="Datoteka" file="true"}}
+                </div>
+                <div class="d-flex justify-content-center my-3">
+                    <button class="btn btn-outline-secondary me-2">Dodaj</button>
+                </div>
+            </div>
+        </section>
+    </section>
+</div>

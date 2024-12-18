@@ -43,12 +43,6 @@ const port = 3002;
 app.listen(port);
 console.log(`Listening to server: http://localhost:${port}`);
 
-app.post("/toggle-login", (req, res) => {
-  req.session.userLoggedIn = !req.session.userLoggedIn;
-  console.log("Session data:", req.session);
-  res.redirect("/");
-});
-
 // Landing page
 app.get("/", (req, res) => {
   const userLoggedIn = req.session.userLoggedIn || false;
@@ -77,39 +71,6 @@ app.get("/azuriranje-podataka", (req, res) => {
   res.render("azuriranje-podataka", data);
 });
 
-app.get("/dodavanje-korisnika", (req, res) => {
-  const data = {
-    title: "Aplikacija za održavanje sadržaja imenika AAI@EduHr Lab-a",
-    pageSubtitle: "Dodavanje korisnika",
-    options: [
-      "Nije odabrano",
-      "student",
-      "djelatnik",
-      "učenik",
-      "vanjski suradnik",
-      "korisnik usluge",
-      "gost",
-      "cjeloživotno obrazovanje",
-    ],
-    linksAdministratori,
-  };
-  res.render("dodavanje-korisnika", data);
-});
-
-app.get("/dodavanje-korisnika-txt", (req, res) => {
-  const data = {
-    title: "Aplikacija za održavanje sadržaja imenika AAI@EduHr Lab-a",
-    pageSubtitle: "Dodavanje korisnika iz tekst. datoteke",
-    options: [
-      "Central european ( windows 1250 )",
-      "Central european ( ISO 8859-2)",
-      "UTF-8",
-    ],
-    linksAdministratori,
-  };
-  res.render("dodavanje-korisnika-txt", data);
-});
-
 app.get("/promjena-zaporke", (req, res) => {
   const data = {
     title: "Aplikacija za održavanje sadržaja imenika AAI@EduHr Lab-a",
@@ -136,6 +97,90 @@ app.get("/lista-korisnika", (req, res) => {
     linksAdministratori,
   };
   res.render("lista-korisnika", data);
+});
+
+app.get("/dodavanje-korisnika", (req, res) => {
+  const data = {
+    title: "Aplikacija za održavanje sadržaja imenika AAI@EduHr Lab-a",
+    pageSubtitle: "Dodavanje korisnika",
+    options: [
+      "Nije odabrano",
+      "student",
+      "djelatnik",
+      "učenik",
+      "vanjski suradnik",
+      "korisnik usluge",
+      "gost",
+      "cjeloživotno obrazovanje",
+    ],
+    linksAdministratori,
+  };
+  res.render("dodavanje-korisnika", data);
+});
+
+app.get("/dodavanje-korisnika-tekst", (req, res) => {
+  const data = {
+    title: "Aplikacija za održavanje sadržaja imenika AAI@EduHr Lab-a",
+    pageSubtitle: "Dodavanje korisnika iz tekst. datoteke",
+    options: [
+      "Central european ( windows 1250 )",
+      "Central european ( ISO 8859-2)",
+      "UTF-8",
+    ],
+    linksAdministratori,
+  };
+  res.render("dodavanje-korisnika-tekst", data);
+});
+
+app.get("/azuriranje-podataka-tekst", (req, res) => {
+  const data = {
+    title: "Aplikacija za održavanje sadržaja imenika AAI@EduHr Lab-a",
+    pageSubtitle: "Azuriranje podataka iz tekst. datoteke",
+    options: [
+      "Central european ( windows 1250 )",
+      "Central european ( ISO 8859-2)",
+      "UTF-8",
+    ],
+    linksAdministratori,
+  };
+  res.render("azuriranje-podataka-tekst", data);
+});
+
+app.get("/zakljucani-korisnici", (req, res) => {
+  const data = {
+    title: "Aplikacija za održavanje sadržaja imenika AAI@EduHr Lab-a",
+    pageSubtitle: "Zaključani korisnici",
+    linksAdministratori,
+  };
+  res.render("zakljucani-korisnici", data);
+});
+
+app.get("/provjera-zaporke", (req, res) => {
+  const data = {
+    title: "Aplikacija za održavanje sadržaja imenika AAI@EduHr Lab-a",
+    pageSubtitle: "Provjera zaporke",
+    linksAdministratori,
+  };
+  res.render("provjera-zaporke", data);
+});
+
+app.get("/datum-isteka", (req, res) => {
+  const data = {
+    title: "Aplikacija za održavanje sadržaja imenika AAI@EduHr Lab-a",
+    pageSubtitle: "Datum isteka",
+    options: [
+      "Nije odabrano",
+      "student",
+      "djelatnik",
+      "učenik",
+      "vanjski suradnik",
+      "korisnik usluge",
+      "gost",
+      "cjeloživotno obrazovanje",
+    ],
+    linksAdministratori,
+  };
+  res.render("datum-isteka", data);
 });
 
 app.get("*", (req, res) => {

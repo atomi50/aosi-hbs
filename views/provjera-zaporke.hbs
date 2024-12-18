@@ -1,0 +1,43 @@
+<div class="container-fluid content-wrapper p-0 flex-grow-1">
+    <div class="container-fluid banner__visual">
+        {{> banner__inner}}
+        {{> shape__divider}}
+    </div>
+    <!-- End of banner beginning of content cards -->
+    <div onclick="toggleSidebar()" class="filter__button" aria-hidden="true"><i class="bi bi-person-fill filterButton"
+            aria-label="Prikaži izbornik" tabindex="-1"></i>
+    </div>
+    <section id="main" class="container-xxl filterContent__container" aria-label="sadržaj">
+        {{> lijevi-izbornik}}
+        <section class="card">
+            <div class="card-body" style="min-height:400px">
+                <h2 class="mt-2">{{pageSubtitle}}</h2>
+                <div class="d-flex justify-content-center mt-5">
+                    <div class="d-flex flex-column align-items-center align-items-sm-start">
+                        <form class="row align-items-start justify-content-center justify-content-sm-start">
+                            <div class="col-auto pe-0">
+                                <label class="" for="korisnickaOznaka">Korisnička oznaka</label>
+                                <input type="text" class="form-control" id="korisnickaOznaka"
+                                    placeholder="Korisnička oznaka">
+                            </div>
+                            <div class="col-auto ps-0 mt-4">
+                                <label class="visually-hidden" for="autoSizingInputGroup">Domena</label>
+                                <div class="input-group">
+                                    <div class="input-group-text border border-0 bg-transparent px-0">@</div>
+                                    <span class="fs-4 ps-1 pb-1">aai-test.hr</span>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="col-auto mb-3">
+                            <label class="" for="korisnickaZaporka">Zaporka</label>
+                            <input type="text" class="form-control" id="korisnickaZaporka" placeholder="Zaporka">
+                        </div>
+                        <div class="col-auto mx-auto">
+                            <button type="submit" class="btn btn-primary">Prijava</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</div>

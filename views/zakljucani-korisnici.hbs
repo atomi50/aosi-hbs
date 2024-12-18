@@ -1,0 +1,23 @@
+<div class="container-fluid content-wrapper p-0 flex-grow-1">
+    <div class="container-fluid banner__visual">
+        {{> banner__inner}}
+        {{> shape__divider}}
+    </div>
+    <!-- End of banner beginning of content cards -->
+    <div onclick="toggleSidebar()" class="filter__button" aria-hidden="true"><i class="bi bi-person-fill filterButton"
+            aria-label="Prikaži izbornik" tabindex="-1"></i>
+    </div>
+    <section id="main" class="container-xxl filterContent__container" aria-label="sadržaj">
+        {{> lijevi-izbornik}}
+        <section class="card">
+            <div class="card-body" style="min-height:400px">
+                <h2 class="mt-2">{{pageSubtitle}}</h2>
+                <div class="d-flex justify-content-center mt-5">
+                    <div class="d-flex flex-column align-items-center align-items-sm-start">
+                        {{!-- Nedefinirano --}}
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</div>

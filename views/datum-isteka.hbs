@@ -22,31 +22,27 @@
                     <div class="collapse" id="infoTekst">
                         <div class="card card-body">
                             <div>
-                                <strong>Lista korisnika</strong><br>
+                                <strong>Promjena datuma isteka</strong><br>
                                 <br>
                                 Legenda:<br><br>
                                 <u>uid</u> - klikom na uid korisnika odlazite na stranicu na kojoj možete ažurirati
-                                korisnikove podatke.<br><br>
-                                <img src="/assets/img/trash-icon.svg" border="0" align="bottom"> - brisanje
-                                korisnika. Klikom na ovu ikonu (ako potvrdno odgovorite na pitanje u prozoru koji će
-                                iskočiti nakon klika) obrisat ćete korisnika.<br>
+                                korisnikove podatke.<br>
+                                <u>Označi sve korisnike</u> - klikom na ovu opciju označit ćete sve korisnike prikazane
+                                na listi.<br>
+                                <u>Odznači sve korisnike</u> - ako kliknete na ovu opciju svi ranije označeni korisnici
+                                bit će odznačeni.<br>
                                 <img src="/assets/img/excel-icon.svg" border="0"> - export svih korisnika koji
                                 zadovoljavaju
-                                uvjete pretrage (ne samo onih prikazanih na trenutnoj stranici) u csv datoteku. Klik na
-                                ovu ikonicu vodi vas na ekran u kojemu možete odabrati atribute čije vrijednosti želite
-                                eksportirati za svakog korisnika.<br>
-                                <span class="fs-5">&raquo;</span> - slijedeća stranica. Ova ikonica
-                                pojavljuje se u traci za navigaciju u samom dnu ekrana. Ako uvjete pretrage zadovoljava
-                                više korisnika nego što ih se može prikazati na jednoj stranici, klikom na ovu ikonicu
-                                pomaknut ćete se na slijedeću stranicu liste korisnika.<br>
-                                <span class="fs-5">&laquo;</span> - prethodna stranica.
+                                uvjete pretrage u csv datoteku. Klik na ovu ikonicu vodi vas na ekran u kojemu možete
+                                odabrati atribute čije vrijednosti želite eksportirati za svakog korisnika.<br>
                                 <br>
                                 <br>
-                                Ova stranica logički je podjeljena u dva dijela: gornji dio služi za postavljanje uvjeta
-                                pretrage, dok je u donjem dijelu dana lista korisnika koji zadovoljavaju uvjete
-                                pretrage. U dnu ekrana je poruka o ukupnom broju korisnika koji zadovoljavaju uvjete
-                                pretrage, ikonica za eksport korisnika u csv datoteku, te traka za navigaciju (ukoliko
-                                je broj korisnika veći od broja korisnika koji se prikazuje na jednoj stranici).<br>
+                                Ova stranica logički je podjeljena u tri dijela: gornji dio služi za postavljanje uvjeta
+                                pretrage, u srednjem dijelu su polje za unos novog datuma isteka i gumb kojim pokrećete
+                                akciju promjene datuma isteka svim označenim korisnicima u datum upisan u polju za unos
+                                novog datuma isteka, dok je u donjem dijelu dana lista korisnika koji zadovoljavaju
+                                uvjete pretrage. U dnu ekrana je poruka o ukupnom broju korisnika koji zadovoljavaju
+                                uvjete pretrage i ikonica za eksport korisnika u csv datoteku.<br>
                                 <br>
                                 <strong>Postavljanje uvjeta pretrage</strong><br>
                                 U polja pored naziva atributa upišite vrijednost (ili je odaberite s liste) i kliknite
@@ -62,21 +58,32 @@
                                 sve postavljene uvjete.<br>
                                 Popis polja po kojima se može pretraživati, kao i uvjet (= ili &lt;=) moguće je podesiti
                                 u konfiguracijskoj datoteci web sučelja.<br>
-                                Ako ne upišete nijedan uvijet pretrage i kliknete na Pretraži, dobit ćete listu svih
-                                korisnika (čije korisničke račune imate pravo administrirati).
+                                Ako ne upišete nijedan uvijet pretrage i kliknete na Pretraži, neće biti prikazan niti
+                                jedan korisnik.
                                 <br>
                                 <br>
                                 <strong>Lista korisnika koji zadovoljavaju uvjete pretrage</strong><br>
                                 U donjem dijelu ekrana prikazana je lista svih korisnika koji zadovoljavaju uvjete
-                                pretrage. Lista je podjeljena na stranice (broj korisnika prikazanih na jednoj stranici
-                                moguće je podesiti u konfiguracijskoj datoteci web sučelja), koje možete pregledavati
-                                koristeći traku za navigaciju u samom dnu ekrana.<br>
+                                pretrage.<br>
                                 Sve korisnike moguće je eksportirati u csv datoteku koristeći ikonicu pri dnu ekrana.
                                 Klik na uid korisnika vodi vas na stranicu na kojoj je moguće ažurirati podatke o
-                                korisniku. Ikonica u zadnjoj koloni s desne strane služi za brisanje korisnika. Klinete
-                                li na tu ikonicu obrisat ćete korisnički račun koji je prikazan u tom retku.<br>
+                                korisniku. Kućica u zadnjoj koloni s desne strane služi za odabir korisnika za promjenu
+                                datuma isteka.<br>
                                 Osim toga, u dnu stranice možete vidjeti i ukupan broj korisnika koji zadovoljavaju
                                 uvjete pretrage.<br><br>
+                                <strong>Promjena datuma isteka</strong><br>
+                                Nakon što ste postavili uvjete i dobili listu korisnika koji zadovoljavaju uvjete
+                                pretrage, na listi je potrebno (koristeći kućice u desnoj koloni) odabrati korisnike
+                                kojima želite promjeniti datum isteka. Ako želite označiti sve korisnike, možete za to
+                                koristiti opciju <u>Označi sve korisnike</u>.
+                                Kad označite korisnike kojima želite promjeniti datum isteka, u polje za unos novog
+                                datuma isteka upišite datum u koji želite korisnicima promjeniti datum isteka (za
+                                korisnike kojima temeljna povezanost s ustanovom ne ističe možete upisati vrijednost
+                                NONE), i kliknite na gumb Promjeni.<br>
+                                Po obavljenoj akciji, bit će vam prikazan izvještaj iz kojega možete vidjeti je li
+                                operacija ažuriranja bila uspješna za svakog pojedinog odabranog korisnika.
+                                <br>
+                                <br>
                             </div>
                         </div>
                     </div>
@@ -91,6 +98,17 @@
                 </div>
                 <div class="d-flex justify-content-center my-3">
                     <button class="btn btn-outline-secondary me-2">Pretraži</button>
+                </div>
+                <div class="d-flex flex-column justify-content-between my-2 align-items-start mt-5">
+                    <label for="promjenaDatuma" class="form-label text-black fw-bold"
+                        aria-label="Promjena datuma isteka korisnicima">Promjena datuma
+                        isteka
+                        korisnicima</label>
+                    <div class="d-flex">
+                        <input type="date" class="form-control" id="promjenaDatuma" placeholder="Unesite novi datum"
+                            style="width:200px" />
+                        <button class="btn btn-outline-secondary ms-2">Promijeni</button>
+                    </div>
                 </div>
             </div>
             {{> tablica}}
