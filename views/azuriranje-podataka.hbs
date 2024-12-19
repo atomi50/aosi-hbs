@@ -14,7 +14,7 @@
                 <h2 class="card-title m-0 pb-0">{{pageSubtitle}}</h2>
                 <div class="mt-5">
                     <h3>Obavezni atributi / ostali atributi nize</h3>
-                    {{> atributi text="Korisnička oznaka" code="hrEduPersonUniqueID" identificator="korisnickaOznaka" description="Vrijednost atributa je jedinstvena korisnička oznaka osobe u sustavu AAI@Edu.hr.
+                    {{> atributi text="Korisnička oznaka" atributeIcon="/assets/img/Ko_Oz.svg" code="hrEduPersonUniqueID" identificator="korisnickaOznaka" description="Vrijednost atributa je jedinstvena korisnička oznaka osobe u sustavu AAI@Edu.hr.
                                     Koristi se pri interinstitucionalnoj autentikaciji.
                                     Sintaksa: <lokalni_id>@<identifikator_imenika>
                                             lokalni_id jednoznačno identificira osobu na nivou matične ustanove;
@@ -22,30 +22,30 @@
                                             korisnika u ustanovi.
                                             identifikator_imenika jednoznačno identificira ustanovu; izvodi se iz DNS
                                             sustava (npr. za ustanovu koja u DNS-u ima domenu)" value="jpslavc@aai-test.hr"}}
-                    {{> atributi text="Identifikator korisnika u ustanovi" code="uid" identificator="identifikator" description="Identifikator korisnika (u pravilu login-name; userid) kojom se identificira osoba
+                    {{> atributi text="Identifikator korisnika u ustanovi" atributeIcon="/assets/img/Id_Ko_Usl.svg" code="uid" identificator="identifikator" description="Identifikator korisnika (u pravilu login-name; userid) kojom se identificira osoba
                                     na matičnoj ustanovi (lokalno); može se rabiti za (lokalnu) autentikaciju; mora
                                     imati istu vrijednost kao lokalni_id u atributu hrEduPersonUniqueID (korisnička
                                     oznaka)." value="jplavac"}}
-                    {{> atributi text="Prezime" code="sn" identificator="prezime" description="Prezime osobe" value="Plavac"}}
-                    {{> atributi text="Ime i prezime" code="cn" identificator="imePrezime" description="Puno ime i prezime osobe" value="Jasmina Plavac"}}
-                    {{> atributi text="Ime" code="sn" identificator="ime" description="Ime osobe" value="Jasmina"}}
-                    {{> atributi text="Elektronička pošta" code="mail" identificator="email" description="Elektronička adresa osobe; nužno je da jedna od vrijednosti ovoga atributa bude i službena elektronička adresa osobe (ona koju matična ustanova koristi za korespodenciju s osobom)." value="jplavac@srce.hr"}}
-                    {{> atributi text="Brojčani identifikator osobe" code="hrEduPersonUniqueNumber" identificator="hrEduPersonUniqueNumber" description="Vrijednost atributa je brojčani identifikator osobe. Koristi se za dodatnu provjeru identiteta kod autorizacije/accountinga.
+                    {{> atributi text="Ime i prezime" atributeIcon="/assets/img/Ime_Prezime.svg" code="cn" identificator="imePrezime" description="Puno ime i prezime osobe" value="Jasmina Plavac"}}
+                    {{> atributi text="Prezime" atributeIcon="/assets/img/Ime_Prezime.svg" code="sn" identificator="prezime" description="Prezime osobe" value="Plavac"}}
+                    {{> atributi text="Ime" code="sn" atributeIcon="/assets/img/Ime_Prezime.svg" identificator="ime" description="Ime osobe" value="Jasmina"}}
+                    {{> atributi text="Elektronička pošta" atributeIcon="/assets/img/e_Posta.svg" code="mail" identificator="email" description="Elektronička adresa osobe; nužno je da jedna od vrijednosti ovoga atributa bude i službena elektronička adresa osobe (ona koju matična ustanova koristi za korespodenciju s osobom)." value="jplavac@srce.hr"}}
+                    {{> atributi text="Brojčani identifikator osobe" atributeIcon="/assets/img/Br_Identif.svg" code="hrEduPersonUniqueNumber" identificator="hrEduPersonUniqueNumber" description="Vrijednost atributa je brojčani identifikator osobe. Koristi se za dodatnu provjeru identiteta kod autorizacije/accountinga.
                         Sintaksa: tip_identifikatora:<vrijednost>.
                         tip_identifikatora ima kontrolirani skup vrijednosti i one mogu biti: OIB, JMBG, JMBAG, MBZ, OIB, PASSPORT_NO, LOCAL_NO;
                         OIB označava OIB broj građana, JMBG označava jedinstveni matični broj građana, JMBAG označava jedinstveni broj u akademskom sustavu (ISVU), MBZ označava matični broj znanstvenika (prema MZOŠ), OIB označava osobni identifikacijski broj, PASSPORT_NO je broj putovnice, a LOCAL_NO identifikacijski broj osobe na matičnoj ustanovi (za studente - broj indeksa).
                         Ukoliko je jedna od vrijednosti ovoga atributa OIB osobe tada ta vrijednost mora odgovorati vrijednosti atributa hrEduPersonOIB. Također, ako vrijednost atributa hrEduPersonOIB nije ?NONE? tada jedna od vrijednosti atributa hrEduPersonUniqueNumber mora biti odgovarajući OIB." value="OIB: 54503703278"}}
-                    {{> atributi text="OIB" code="hrEduPersonOIB" identificator="hrEduPersonOIB" description="Vrijednost atributa je OIB broj osobe. Koristi se za dodatnu provjeru identiteta kod autorizacije. Ako vrijednost ovoga atributa nije NONE tada jedna od vrijednosti atributa hrEduPersonUniqueNumber mora biti odgovarajući OIB. Također, ako je jedna od vrijednosti atributa hrEduPersonUniqueNumber OIB osobe tada ta vrijednost mora odgovorati vrijednosti atributa hrEduPersonOIB." value="54503703278"}}
-                    {{> atributi text="Povezanost s ustanovom" code="hrEduPersonAffiliation" identificator="hrEduPersonAffiliation" description="Određuje veze između osobe i matične ustanove (primjerice student, djelatnik, ...). Ako je osoba vezana uz ustanovu na više načina, potrebno je upisati sve veze." value="djelatnik"}}
-                    {{> atributi text="Spol" code="hrEduPersonGender"  identificator="hrEduPersonGender" 
-                        description="Spol osobe prema šifarniku (vidjeti dopuštene vrijednosti)." 
-                        value="djelatnik"
-                        select="true"
-                    }}
-
-                    {{> atributi text="Vrsta studenta" code="hrEduPersonStudentCategory" identificator="hrEduPersonStudentCategory" description="Detaljnija informacija o osobi koja je uz ustanovu vezana kao student ili učenik (vidjeti atribute hrEduPersonAffiliation i hrEduPersonPrimaryAffiliation)." input="true"}}
-                    {{> atributi text="Prezime" code="sn" identificator="prezime" description="Puno ime i prezime osobe" value="Jasmina Plavac"}}
-                    {{> atributi text="Slika" code="jpegPhoto" identificator="jpegPhoto" description="Slika osobe u jpeg formatu." file="true" }}
+                    {{> atributi text="OIB" atributeIcon="/assets/img/Br_Identif.svg" code="hrEduPersonOIB" identificator="hrEduPersonOIB" description="Vrijednost atributa je OIB broj osobe. Koristi se za dodatnu provjeru identiteta kod autorizacije. Ako vrijednost ovoga atributa nije NONE tada jedna od vrijednosti atributa hrEduPersonUniqueNumber mora biti odgovarajući OIB. Također, ako je jedna od vrijednosti atributa hrEduPersonUniqueNumber OIB osobe tada ta vrijednost mora odgovorati vrijednosti atributa hrEduPersonOIB." value="54503703278"}}
+                    {{> atributi text="Povezanost s ustanovom" atributeIcon="/assets/img/Pov_Ustan.svg" code="hrEduPersonAffiliation" identificator="hrEduPersonAffiliation" description="Određuje veze između osobe i matične ustanove (primjerice student, djelatnik, ...). Ako je osoba vezana uz ustanovu na više načina, potrebno je upisati sve veze." value="djelatnik"}}
+                    {{> atributi text="Temeljna povezanost s ustanovom" atributeIcon="/assets/img/Pov_Ustan.svg" code="hrEduPersonAffiliation" identificator="hrEduPersonAffiliation" description="Određuje veze između osobe i matične ustanove (primjerice student, djelatnik, ...). Ako je osoba vezana uz ustanovu na više načina, potrebno je upisati sve veze." value="djelatnik"}}
+                    {{> atributi text="Datum isteka temeljne povezanosti" atributeIcon="/assets/img/Datum_isteka.svg" code="hrEduPersonAffiliation" identificator="hrEduPersonAffiliation" description="Određuje veze između osobe i matične ustanove (primjerice student, djelatnik, ...). Ako je osoba vezana uz ustanovu na više načina, potrebno je upisati sve veze." value="djelatnik"}}
+                    {{> atributi text="Naziv matične ustanove" atributeIcon="/assets/img/Naz_maticne.svg" code="hrEduPersonAffiliation" identificator="hrEduPersonAffiliation" description="Određuje veze između osobe i matične ustanove (primjerice student, djelatnik, ...). Ako je osoba vezana uz ustanovu na više načina, potrebno je upisati sve veze." value="djelatnik"}}
+                    {{> atributi text="Naziv matične ustanove" atributeIcon="/assets/img/Naz_maticne.svg" code="hrEduPersonAffiliation" identificator="hrEduPersonAffiliation" description="Određuje veze između osobe i matične ustanove (primjerice student, djelatnik, ...). Ako je osoba vezana uz ustanovu na više načina, potrebno je upisati sve veze." value="djelatnik"}}
+                    {{> atributi text="Oznaka matične ustanove" atributeIcon="/assets/img/Oznaka_maticne.svg" code="hrEduPersonStudentCategory" identificator="hrEduPersonStudentCategory" description="Detaljnija informacija o osobi koja je uz ustanovu vezana kao student ili učenik (vidjeti atribute hrEduPersonAffiliation i hrEduPersonPrimaryAffiliation)." input="true"}}
+                    {{> atributi text="Poštanska adresa" atributeIcon="/assets/img/Postanska.svg" code="hrEduPersonStudentCategory" identificator="hrEduPersonStudentCategory" description="Detaljnija informacija o osobi koja je uz ustanovu vezana kao student ili učenik (vidjeti atribute hrEduPersonAffiliation i hrEduPersonPrimaryAffiliation)." input="true"}}
+                    {{> atributi text="Mjesto(lokalitet)" atributeIcon="/assets/img/Mjesto.svg" code="hrEduPersonStudentCategory" identificator="hrEduPersonStudentCategory" description="Detaljnija informacija o osobi koja je uz ustanovu vezana kao student ili učenik (vidjeti atribute hrEduPersonAffiliation i hrEduPersonPrimaryAffiliation)." input="true"}}
+                    {{> atributi text="Trajna korisnička oznaka" atributeIcon="/assets/img/Tr_Kor_Oz.svg" code="hrEduPersonStudentCategory" identificator="hrEduPersonStudentCategory" description="Detaljnija informacija o osobi koja je uz ustanovu vezana kao student ili učenik (vidjeti atribute hrEduPersonAffiliation i hrEduPersonPrimaryAffiliation)." input="true"}}
+                    {{> atributi text="Slika"  code="jpegPhoto" identificator="jpegPhoto" description="Slika osobe u jpeg formatu." file="true" }}
 
                 </div>
                 <div class="d-flex justify-content-center my-3">

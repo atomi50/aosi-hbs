@@ -1,52 +1,57 @@
-<div class="d-flex flex-column justify-content-between align-items-start mt-3">
-  <div>
-    <p class="text-black fw-bold d-inline">
-      {{text}}
-    </p>
-    <span>({{code}})</span>
-    <a class="text-danger text-decoration-none" data-bs-toggle="collapse" href="#{{identificator}}" role="button"
-      aria-expanded="false" aria-controls="{{identificator}}">
-      info
-    </a>
-    <div class="collapse" id="{{identificator}}">
-      <div class="card card-body">
-        {{description}}
+<div class="d-flex align-items-center">
+  {{#if atributeIcon}}
+    <img src="{{atributeIcon}}" class="me-3" style="height:45px" alt="">
+  {{/if}}
+  <div class="d-flex flex-column justify-content-between align-items-start my-3">
+    <div>
+      <p class="text-black fw-bold d-inline">
+        {{text}}
+      </p>
+      <span>({{code}})</span>
+      <a class="text-danger text-decoration-none" data-bs-toggle="collapse" href="#{{identificator}}" role="button"
+        aria-expanded="false" aria-controls="{{identificator}}">
+        info
+      </a>
+      <div class="collapse" id="{{identificator}}">
+        <div class="card card-body">
+          {{description}}
+        </div>
       </div>
     </div>
-  </div>
-  <div>
-    {{#if select}}
-      <select class="form-select" aria-label="odaberite opciju">
-        {{#each options}}
-          <option value="{{this}}">{{this}}</option>
-        {{/each}}
-      </select>
-    {{else if input}}
-      <div>
-        <label for="{{code}}" class="form-label visually-hidden">inputLabel</label>
-        <input type="{{input.type}}" class="form-control" id="{{code}}" aria-describedby="{{input.aria}}"
-          placeholder="{{input.placeholder}}" />
-      </div>
-    {{else if calendar}}
-      <div>
-        <form action="/action_page.php">
-          <label for="{{code}}" class="form-label visually-hidden">datum</label>
-          <input type="date" id="{{code}}" name="datum"
-            style="width:230px;height:40px; border-radius:5px;border:1px solid lightgray;padding:5px">
-          <input type="submit" aria-label="submit" class="visually-hidden">
-        </form>
-      </div>
-    {{else if file}}
-      <div class="mt-md-n3">
-        <form action="/action_page.php" method="post" enctype="multipart/form-data">
-          <label for="file-upload" aria-label="odaberite sliku" class="form-label mt-1 me-4" id="uploadFile"
-            tabindex="0">
-          </label>
-          <input type="file" id="file-upload" name="file-upload" class="form-control">
-        </form>
-      </div>
-    {{else}}
-      <p>{{value}}</p>
-    {{/if}}
+    <div>
+      {{#if select}}
+        <select class="form-select" aria-label="odaberite opciju">
+          {{#each options}}
+            <option value="{{this}}">{{this}}</option>
+          {{/each}}
+        </select>
+      {{else if input}}
+        <div>
+          <label for="{{code}}" class="form-label visually-hidden">inputLabel</label>
+          <input type="{{input.type}}" class="form-control" id="{{code}}" aria-describedby="{{input.aria}}"
+            placeholder="{{input.placeholder}}" />
+        </div>
+      {{else if calendar}}
+        <div>
+          <form action="/action_page.php">
+            <label for="{{code}}" class="form-label visually-hidden">datum</label>
+            <input type="date" id="{{code}}" name="datum"
+              style="width:230px;height:40px; border-radius:5px;border:1px solid lightgray;padding:5px">
+            <input type="submit" aria-label="submit" class="visually-hidden">
+          </form>
+        </div>
+      {{else if file}}
+        <div class="mt-md-n3">
+          <form action="/action_page.php" method="post" enctype="multipart/form-data">
+            <label for="file-upload" aria-label="odaberite sliku" class="form-label mt-1 me-4" id="uploadFile"
+              tabindex="0">
+            </label>
+            <input type="file" id="file-upload" name="file-upload" class="form-control">
+          </form>
+        </div>
+      {{else}}
+        <p class="mb-0">{{value}}</p>
+      {{/if}}
+    </div>
   </div>
 </div>

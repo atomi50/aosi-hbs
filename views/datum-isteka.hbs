@@ -94,7 +94,7 @@
                     {{> uvjeti text="Ime" code="givenName" identificator="givenName" }}
                     {{> uvjeti text="Prezime" code="sn" identificator="prezime" }}
                     {{> uvjeti text="Datum isteka temeljne povezanosti" code="hrEduPersonExpireDate" identificator="hrEduPersonExpireDate" sign="<="}}
-                    {{> uvjeti text="Datum isteka temeljne povezanosti" code="hrEduPersonExpireDate1" identificator="hrEduPersonExpireDate" sign=">="}}
+                    {{> uvjeti text="Datum isteka temeljne povezanosti"  code="hrEduPersonExpireDate1" identificator="hrEduPersonExpireDate" sign=">="}}
                 </div>
                 <div class="d-flex justify-content-center my-3">
                     <button class="btn btn-outline-secondary me-2">Pretraži</button>
@@ -111,7 +111,7 @@
                     </div>
                 </div>
             </div>
-            {{> tablica}}
+            {{> tablica odabir="true"}}
         </section>
 
     </section>
