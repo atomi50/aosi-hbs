@@ -13,7 +13,7 @@
             <div class="card-body">
                 <h2 class="card-title m-0 pb-0">{{pageSubtitle}}</h2>
                 <div class="mt-5">
-                    <h3>Obavezni atributi / ostali atributi nize</h3>
+                    <h3>Obavezni atributi (ostali atributi niže) </h3>
                     {{> atributi text="Korisnička oznaka" atributeIcon="/assets/img/Ko_Oz.svg" code="hrEduPersonUniqueID" identificator="korisnickaOznaka" description="Vrijednost atributa je jedinstvena korisnička oznaka osobe u sustavu AAI@Edu.hr.
                                     Koristi se pri interinstitucionalnoj autentikaciji.
                                     Sintaksa: <lokalni_id>@<identifikator_imenika>
@@ -45,12 +45,45 @@
                     {{> atributi text="Poštanska adresa" atributeIcon="/assets/img/Postanska.svg" code="hrEduPersonStudentCategory" identificator="hrEduPersonStudentCategory" description="Detaljnija informacija o osobi koja je uz ustanovu vezana kao student ili učenik (vidjeti atribute hrEduPersonAffiliation i hrEduPersonPrimaryAffiliation)." input="true"}}
                     {{> atributi text="Mjesto(lokalitet)" atributeIcon="/assets/img/Mjesto.svg" code="hrEduPersonStudentCategory" identificator="hrEduPersonStudentCategory" description="Detaljnija informacija o osobi koja je uz ustanovu vezana kao student ili učenik (vidjeti atribute hrEduPersonAffiliation i hrEduPersonPrimaryAffiliation)." input="true"}}
                     {{> atributi text="Trajna korisnička oznaka" atributeIcon="/assets/img/Tr_Kor_Oz.svg" code="hrEduPersonStudentCategory" identificator="hrEduPersonStudentCategory" description="Detaljnija informacija o osobi koja je uz ustanovu vezana kao student ili učenik (vidjeti atribute hrEduPersonAffiliation i hrEduPersonPrimaryAffiliation)." input="true"}}
+                </div>
+                <hr>
+                <div class="mt-5">
+                    <h3>Ostali atributi </h3>
+                    {{> atributi text="Telefonski broj"  code="telephoneNumber" identificator="telefonskiBroj" description='Telefonski broj osobe u ustanovi. Zapisan sukladno normi CCITT E.123.' value=""}}
+                    {{> atributi text="Lokalni telefonski broj"  code="hrEduPersonExtensionNumber" identificator="lokalniTelefonskiBroj" description='Lokalni telefonski broj osobe u ustanovi.' value="" input=true}}
+                    {{> atributi text="Fax broj"  code="facsimileTelephoneNumber" identificator="faxBroj" description='Fax broj u ustanovi. Zapisan sukladno normi CCITT E.123.' value=""}}
+                    {{> atributi text="Datum rođenja"  code="hrEduPersonDateOfBirth" identificator="datumRodenja" description='Datum rođenja osobe zapisan po RFC 3339 standardu (ggggmmdd).' value=""}}
+                    {{> atributi text="Spol"  code="hrEduPersonGender" identificator="spol" description='Spol osobe prema šifarniku (vidjeti dopuštene vrijednosti).' value="" select=true}}
                     {{> atributi text="Slika"  code="jpegPhoto" identificator="jpegPhoto" description="Slika osobe u jpeg formatu." file="true" }}
-
+                    {{> atributi text="URI adresa"  code="labeledURI" identificator="uriAdresa" description="URI (URL) adresa vezana uz osobu; može sadržavati dodatnu oznaku (labelu)." input=true}}
+                    {{> atributi text="Stručni status"  code="hrEduPersonProfessionalStatus" identificator="strucniStatus" description="Najviši stupanj stručne spreme ili akademski stupanj koji osoba posjeduje."}}
+                    {{> atributi text="Zvanje"  code="hrEduPersonAcademicStatus" identificator="zvanje" description="Zvanje koje je osoba stekla u sustavu znanosti i visokog školstva."}}
+                    {{> atributi text="Područje znanosti"  code="hrEduPersonScienceArea" identificator="podrucjeZnanosti" description="Područje znanosti kojim se osoba bavi prema klasifikaciji MZOŠ."}}
+                    {{> atributi text="Vrsta studenta"  code="hrEduPersonStudentCategory" identificator="vrstaStudenta" description="Detaljnija informacija o osobi koja je uz ustanovu vezana kao student ili učenik (vidjeti atribute
+                    hrEduPersonAffiliation i hrEduPersonPrimaryAffiliation)."}}
+                    {{> atributi text="Položaj u ustanovi"  code="hrEduPersonTitle" identificator="polozajuUstanovi" description="Položaj osobe u organizacijskoj shemi ustanove (primjerice voditelj odjela ili ravnatelj)."}}
+                    {{> atributi text="Uloga u ustanovi"  code="hrEduPersonRole" identificator="ulogauUstanovi" description="Uloga/funkcija koju osoba ima u ustanovi ili obnaša u ime ustanove (npr. CARNet sistem inženjer, CARNet koordinator, ICT
+                    koordinator, ISVU koordinator, ...). Ako je nekoj osobi jedna od vrijednosti ovog atributa administrator imenika, ta
+                    osoba ima pravo (kroz AOSI web servis i web sučelje) administrirati podatke u imeniku ustanove." value="administrator imenika"}}
+                    {{> atributi text="Vrsta posla u ustanovi"  code="hrEduPersonStaffCategory" identificator="vrstaPoslauUstanovi" description="Vrsta posla koju osoba obavlja u ustanovi (npr. nastavnik, istraživač, administrativno osoblje, ...)."}}
+                    {{> atributi text="Pripadnost grupi"  code="hrEduPersonGroupMember" identificator="pripadnostuGrupi" description="Grupa kojoj korisnik pripada. Određuje se za potrebe projekata ili virtualnih organizacija (VO)."}}
+                    {{> atributi text="Organizacijska jedinica"  code="ou" identificator="organizacijskaJedinica" description="Naziv organizacijske jedinice kojoj pripada osoba (sukladno unutarnjem ustroju matične ustanove)."}}
+                    {{> atributi text="Broj sobe"  code="roomNumber" identificator="brojSobe" description="Broj sobe u ustanovi." input=true}}
+                    {{> atributi text="Poštanski broj"  code="postalCode" identificator="postanskiBroj" description="Poštanski broj iz službene adrese zapisan prema službenoj poštanskoj normi."}}
+                    {{> atributi text="Ulica i kućni broj"  code="street" identificator="ulicaiKucniBroj" description="Ulica i kućni broj iz službene adrese."}}
+                    {{> atributi text="Kućna poštanska adresa"  code="homePostalAddress" identificator="kucnaPostanskaAdresa" description="Puna kućna adresa (koju je potrebno napisati na poštansku pošiljku poslanu osobi)." input=true}}
+                    {{> atributi text="Kućni telefonski broj"  code="homeTelephoneNumber" identificator="kucniTelefonskiBroj" description="Telefonski broj osobe kod kuće. Zapisan sukladno normi CCITT E. 123." input=true}}
+                    {{> atributi text="Desktop uređaj"  code="hrEduPersonCommURI" identificator="desktopUredaj" description="URI s oznakom koji sadrži pokazivač na informaciju o desktop uređaju za potrebe usluge videokonferencija (po H.350
+                    standardu)." input=true}}
+                    {{> atributi text="Mrežno ime"  code="displayName" identificator="mreznoIme" description="Izabrano ime korisnika koje aplikacije (resursi) mogu koristiti prilikom ispisa na zaslonu; u pravilu se izvodi iz
+                    vrijednosti atributa cn (ime i prezime). Preporuča se transformirati vrijednost atributa cn tako da se slova ć,č,đ,š,ž
+                    zamjene s c,dj,s,z." input=true}}
+                    {{> atributi text="Mrežna oznaka korisnika"  code="schacUserPresenceID" identificator="mreznaOznakaKorisnika" description="URI s oznakom vezanom uz prisutnost korisnika na mreži (npr. H.323, SIP)." value="Jasmina Plavac" input=true}}
+                    {{> atributi text="Broj kartice"  code="hrEduPersonCardNum" identificator="brojKartice" description="Broj važeće pametne kartice koju osoba posjeduje." input=true}}
                 </div>
                 <div class="d-flex justify-content-center my-3">
                     <button class="btn btn-outline-secondary me-2">Ažuriraj</button>
-                    <button class="btn btn-outline-secondary ms-2">Poništi</button>
+                    <button class="btn btn-outline-info ms-2">Poništi</button>
                 </div>
             </div>
         </section>

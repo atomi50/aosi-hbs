@@ -39,7 +39,7 @@ app.engine(
   })
 );
 
-const port = 3002;
+const port = 4001;
 app.listen(port);
 console.log(`Listening to server: http://localhost:${port}`);
 
@@ -181,6 +181,39 @@ app.get("/datum-isteka", (req, res) => {
     linksAdministratori,
   };
   res.render("datum-isteka", data);
+});
+
+app.get("/brisanje-korisnika", (req, res) => {
+  const data = {
+    title: "Aplikacija za održavanje sadržaja imenika AAI@EduHr Lab-a",
+    pageSubtitle: "Brisanje korisnika",
+    options: [
+      "Nije odabrano",
+      "student",
+      "djelatnik",
+      "učenik",
+      "vanjski suradnik",
+      "korisnik usluge",
+      "gost",
+      "cjeloživotno obrazovanje",
+    ],
+    linksAdministratori,
+  };
+  res.render("brisanje-korisnika", data);
+});
+
+app.get("/brisanje-korisnika-tekst", (req, res) => {
+  const data = {
+    title: "Aplikacija za održavanje sadržaja imenika AAI@EduHr Lab-a",
+    pageSubtitle: "Brisanje korisnika iz tekst. datoteke",
+    options: [
+      "Central european ( windows 1250 )",
+      "Central european ( ISO 8859-2)",
+      "UTF-8",
+    ],
+    linksAdministratori,
+  };
+  res.render("brisanje-korisnika-tekst", data);
 });
 
 app.get("*", (req, res) => {
