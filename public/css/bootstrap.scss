@@ -76,6 +76,7 @@ body {
 .btn-secondary:hover {
   background-color: #364561;
   border-color: #364561;
+  color: #ffffff;
   transition: 0.7s;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
 }
@@ -653,6 +654,9 @@ input:checked + .slider:before {
 }
 
 // Filters
+.card__filters-body {
+  box-shadow: 50px 50px 30px -35px rgba(0, 0, 0, 0.5);
+}
 
 .card__filters .card__filters-body ul {
   list-style: none;

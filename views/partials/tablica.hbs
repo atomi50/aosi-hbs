@@ -1,207 +1,211 @@
-<section class="overflow-x-auto mt-5" aria-label="rezultati pretrage">
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th scope="col">Korisnička oznaka</th>
-                <th scope="col">Ime i prezime</th>
-                <th scope="col">Jedinstveni identifikator</th>
-                <th scope="col">Temeljna povezanost s ustanovom</th>
-                <th scope="col">Datum isteka tem. pov.</th>
-                {{#if odabir}}
-                    <th scope="col">Odabir</th>
-                {{else}}
-                    <th scope="col">Brisanje</th>
-                {{/if}}
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1003147216</th>
-                <td>Nikolina Cvitic</td>
-                <td>OIB: 12045092560</td>
-                <td>student</td>
-                <td>NONE</td>
-                {{#if odabir}}
-                    <td>
-                        <div>
-                            <input type="checkbox" id="" name="scales" />
-                            <label for="scales" class="visually-hidden">Odabir</label>
-                        </div>
-                    </td>
-                {{else}}
-                    <td>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#d71635"
-                            class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
-                        </svg>
-                    </td>
-                {{/if}}
-            </tr>
-            <tr>
-                <th scope="row">a.salkanovic</th>
-                <td>alen salkanovic</td>
-                <td>OIB: 92147628585</td>
-                <td>student</td>
-                <td>NONE</td>
-                {{#if odabir}}
-                    <td>
-                        <div>
-                            <input type="checkbox" id="" name="scales" />
-                            <label for="scales" class="visually-hidden">Odabir</label>
-                        </div>
-                    </td>
-                {{else}}
-                    <td>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#d71635"
-                            class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
-                        </svg>
-                    </td>
-                {{/if}}
-            </tr>
-            <tr>
-                <th scope="row">1003147216</th>
-                <td>Nikolina Cvitic</td>
-                <td>OIB: 12045092560</td>
-                <td>student</td>
-                <td>NONE</td>
-                {{#if odabir}}
-                    <td>
-                        <div>
-                            <input type="checkbox" id="" name="scales" />
-                            <label for="scales" class="visually-hidden">Odabir</label>
-                        </div>
-                    </td>
-                {{else}}
-                    <td>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#d71635"
-                            class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
-                        </svg>
-                    </td>
-                {{/if}}
-            </tr>
-            <tr>
-                <th scope="row">1003147216</th>
-                <td>Nikolina Cvitic</td>
-                <td>OIB: 12045092560</td>
-                <td>student</td>
-                <td>NONE</td>
-                {{#if odabir}}
-                    <td>
-                        <div>
-                            <input type="checkbox" id="" name="scales" />
-                            <label for="scales" class="visually-hidden">Odabir</label>
-                        </div>
-                    </td>
-                {{else}}
-                    <td>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#d71635"
-                            class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
-                        </svg>
-                    </td>
-                {{/if}}
-            </tr>
-            <tr>
-                <th scope="row">1003147216</th>
-                <td>Nikolina Cvitic</td>
-                <td>OIB: 12045092560</td>
-                <td>student</td>
-                <td>NONE</td>
-                {{#if odabir}}
-                    <td>
-                        <div>
-                            <input type="checkbox" id="" name="scales" />
-                            <label for="scales" class="visually-hidden">Odabir</label>
-                        </div>
-                    </td>
-                {{else}}
-                    <td>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#d71635"
-                            class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
-                        </svg>
-                    </td>
-                {{/if}}
-            </tr>
-            <tr>
-                <th scope="row">1003147216</th>
-                <td>Nikolina Cvitic</td>
-                <td>OIB: 12045092560</td>
-                <td>student</td>
-                <td>NONE</td>
-                {{#if odabir}}
-                    <td>
-                        <div>
-                            <input type="checkbox" id="" name="scales" />
-                            <label for="scales" class="visually-hidden">Odabir</label>
-                        </div>
-                    </td>
-                {{else}}
-                    <td>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#d71635"
-                            class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
-                        </svg>
-                    </td>
-                {{/if}}
-            </tr>
-            <tr>
-                <th scope="row">1003147216</th>
-                <td>Nikolina Cvitic</td>
-                <td>OIB: 12045092560</td>
-                <td>student</td>
-                <td>NONE</td>
-                {{#if odabir}}
-                    <td>
-                        <div>
-                            <input type="checkbox" id="" name="scales" />
-                            <label for="scales" class="visually-hidden">Odabir</label>
-                        </div>
-                    </td>
-                {{else}}
-                    <td>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#d71635"
-                            class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
-                        </svg>
-                    </td>
-                {{/if}}
-            </tr>
-            <tr>
-                <th scope="row">1003147216</th>
-                <td>Nikolina Cvitic</td>
-                <td>OIB: 12045092560</td>
-                <td>student</td>
-                <td>NONE</td>
-                {{#if odabir}}
-                    <td>
-                        <div>
-                            <input type="checkbox" id="" name="scales" />
-                            <label for="scales" class="visually-hidden">Odabir</label>
-                        </div>
-                    </td>
-                {{else}}
-                    <td>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#d71635"
-                            class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
-                        </svg>
-                    </td>
-                {{/if}}
-            </tr>
-
-        </tbody>
-    </table>
+<section class="mt-5" aria-label="rezultati pretrage">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Korisnička oznaka</th>
+                    <th>Ime i prezime</th>
+                    <th>Jedinstveni identifikator</th>
+                    <th>Temeljna povezanost s ustanovom</th>
+                    <th>Datum isteka tem. pov.</th>
+                    {{#if odabir}}
+                        <th>
+                            <input type="checkbox" class="mb-5" name="označi sve" title="Označi sve">
+                            Odabir
+                        </th>
+                    {{else}}
+                        <th>Brisanje</th>
+                    {{/if}}
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1003147216</th>
+                    <td>Nikolina Cvitic</td>
+                    <td>OIB: 12045092560</td>
+                    <td>student</td>
+                    <td>NONE</td>
+                    {{#if odabir}}
+                        <td>
+                            <div>
+                                <input type="checkbox" id="one" name="scales" />
+                                <label for="one" style="opacity:0">Odabir</label>
+                            </div>
+                        </td>
+                    {{else}}
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#d71635"
+                                class="bi bi-trash3-fill" aria-label="obriši" viewBox="0 0 16 16">
+                                <path
+                                    d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
+                            </svg>
+                        </td>
+                    {{/if}}
+                </tr>
+                <tr>
+                    <th>a.salkanovic</th>
+                    <td>alen salkanovic</td>
+                    <td>OIB: 92147628585</td>
+                    <td>student</td>
+                    <td>NONE</td>
+                    {{#if odabir}}
+                        <td>
+                            <div>
+                                <input type="checkbox" id="two" name="scales" />
+                                <label for="two" style="opacity:0">Odabir</label>
+                            </div>
+                        </td>
+                    {{else}}
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#d71635"
+                                class="bi bi-trash3-fill" aria-label="obriši" viewBox="0 0 16 16">
+                                <path
+                                    d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
+                            </svg>
+                        </td>
+                    {{/if}}
+                </tr>
+                <tr>
+                    <th>1003147216</th>
+                    <td>Nikolina Cvitic</td>
+                    <td>OIB: 12045092560</td>
+                    <td>student</td>
+                    <td>NONE</td>
+                    {{#if odabir}}
+                        <td>
+                            <div>
+                                <input type="checkbox" id="three" name="scales" />
+                                <label for="three" style="opacity:0">Odabir</label>
+                            </div>
+                        </td>
+                    {{else}}
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#d71635"
+                                class="bi bi-trash3-fill" aria-label="obriši" viewBox="0 0 16 16">
+                                <path
+                                    d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
+                            </svg>
+                        </td>
+                    {{/if}}
+                </tr>
+                <tr>
+                    <th>1003147216</th>
+                    <td>Nikolina Cvitic</td>
+                    <td>OIB: 12045092560</td>
+                    <td>student</td>
+                    <td>NONE</td>
+                    {{#if odabir}}
+                        <td>
+                            <div>
+                                <input type="checkbox" id="four" name="scales" />
+                                <label for="four" style="opacity:0">Odabir</label>
+                            </div>
+                        </td>
+                    {{else}}
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#d71635"
+                                class="bi bi-trash3-fill" aria-label="obriši" viewBox="0 0 16 16">
+                                <path
+                                    d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
+                            </svg>
+                        </td>
+                    {{/if}}
+                </tr>
+                <tr>
+                    <th>1003147216</th>
+                    <td>Nikolina Cvitic</td>
+                    <td>OIB: 12045092560</td>
+                    <td>student</td>
+                    <td>NONE</td>
+                    {{#if odabir}}
+                        <td>
+                            <div>
+                                <input type="checkbox" id="five" name="scales" />
+                                <label for="five" style="opacity:0">Odabir</label>
+                            </div>
+                        </td>
+                    {{else}}
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#d71635"
+                                class="bi bi-trash3-fill" aria-label="obriši" viewBox="0 0 16 16">
+                                <path
+                                    d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
+                            </svg>
+                        </td>
+                    {{/if}}
+                </tr>
+                <tr>
+                    <th>1003147216</th>
+                    <td>Nikolina Cvitic</td>
+                    <td>OIB: 12045092560</td>
+                    <td>student</td>
+                    <td>NONE</td>
+                    {{#if odabir}}
+                        <td>
+                            <div>
+                                <input type="checkbox" id="six" name="scales" />
+                                <label for="six" style="opacity:0">Odabir</label>
+                            </div>
+                        </td>
+                    {{else}}
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#d71635"
+                                class="bi bi-trash3-fill" aria-label="obriši" viewBox="0 0 16 16">
+                                <path
+                                    d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
+                            </svg>
+                        </td>
+                    {{/if}}
+                </tr>
+                <tr>
+                    <th>1003147216</th>
+                    <td>Nikolina Cvitic</td>
+                    <td>OIB: 12045092560</td>
+                    <td>student</td>
+                    <td>NONE</td>
+                    {{#if odabir}}
+                        <td>
+                            <div>
+                                <input type="checkbox" id="seven" name="one" />
+                                <label for="seven" style="opacity:0">Odabir</label>
+                            </div>
+                        </td>
+                    {{else}}
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#d71635"
+                                class="bi bi-trash3-fill" aria-label="obriši" viewBox="0 0 16 16">
+                                <path
+                                    d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
+                            </svg>
+                        </td>
+                    {{/if}}
+                </tr>
+                <tr>
+                    <th>1003147216</th>
+                    <td>Nikolina Cvitic</td>
+                    <td>OIB: 12045092560</td>
+                    <td>student</td>
+                    <td>NONE</td>
+                    {{#if odabir}}
+                        <td>
+                            <div>
+                                <input type="checkbox" id="eight" name="scales" />
+                                <label for="eight" style="opacity:0">Odabir</label>
+                            </div>
+                        </td>
+                    {{else}}
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#d71635"
+                                class="bi bi-trash3-fill" aria-label="obriši" viewBox="0 0 16 16">
+                                <path
+                                    d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
+                            </svg>
+                        </td>
+                    {{/if}}
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <div class="d-flex flex-column align-items-center mt-3">
         <p class="mb-0">Ukupno zapisa <span> 466</span></p>
         <img src="/assets/img/excel-icon.svg" alt="excel ikona">
